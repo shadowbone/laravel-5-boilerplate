@@ -6,5 +6,5 @@ RUN yum install yum-utils -y
 RUN yum-config-manager --enable remi-php72 && yum install php php-mbstring php-gd php-xml php-pdo -y 
 ADD bahan.tar.gz /var/phpunit/ 
 WORKDIR /var/phpunit 
-RUN tar zxvf bahan.tar.gz 
+RUN tar -zxvf bahan.tar.gz 
 ENTRYPOINT php artisan key:generate
